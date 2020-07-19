@@ -1,5 +1,7 @@
 # mevn-hwk-journal
-
+used instructions in
+https://kbroman.org/github_tutorial/pages/init.html
+to create an empty repository at github, and then connect this directory to that repo.
 ## Project setup
 ```
 npm install
