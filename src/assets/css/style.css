@@ -61,3 +61,16 @@ div#custom-home {
     justify-content: center;
     align-items: center;
 }
+
+.btn-primary{
+    background-color: #32aced !important;
+}
+
+.btn-success {
+    background-color: #4fc08d !important;
+    color: #fff !important;
+}
+
+.btn-success:hover{
+    background-color: #3da978;
+}
