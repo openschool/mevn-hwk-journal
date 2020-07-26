@@ -47,11 +47,13 @@ Vue.use(VueRouter)
     path: '*',
     redirect: '/'
   }
+  ]
 
-]
 
 const router = new VueRouter({
-  routes
+  routes,
+  linkActiveClass: 'active',
+  mode: 'history'
 })
 
 export default router

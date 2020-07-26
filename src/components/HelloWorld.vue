@@ -4,7 +4,7 @@
     <p class="lead">This is a sample Task Manager Application using Mongodb, Express JS, Vue JS and Node JS.</p>
     <hr class="my-4">
     <p>Click below to begin managing tasks.</p>
-    <a class="btn btn-success btn-lg" href="#" role="button">View Tasks</a>
+    <router-link to="/tasks" class="btn btn-success btn-lg">View Tasks</router-link>
   </div>
 </template>
 
