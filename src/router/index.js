@@ -12,6 +12,7 @@ import TasksEdit from '../views/tasks/TasksEdit.vue'
 
 Vue.use(VueRouter)
 
+  const isLoggedIn = true;
   const routes = [
   {
     path: '/',
@@ -21,27 +22,62 @@ Vue.use(VueRouter)
   {
     path: '/tasks',
     name: 'tasks-all',
-    component: TasksAll
+    component: TasksAll,
+    beforeEnter: (to, from, next) => {
+      if (isLoggedIn) {
+        next();
+      } else {
+        next('/');
+      }
+    }
   },
   {
     path: '/tasks/new',
     name: 'tasks-create',
-    component: TasksCreate
+    component: TasksCreate,
+    beforeEnter: (to, from, next) => {
+      if (isLoggedIn) {
+        next();
+      } else {
+        next('/');
+      }
+    }
   },
   {
     path: '/tasks/:id',
     name: 'tasks-edit',
-    component: TasksEdit
+    component: TasksEdit,
+    beforeEnter: (to, from, next) => {
+      if (isLoggedIn) {
+        next();
+      } else {
+        next('/');
+      }
+    }
   },
   {
     path: '/register',
     name: 'register',
-    component: Register
+    component: Register,
+    beforeEnter: (to, from, next) => {
+      if (!isLoggedIn) {
+        next();
+      } else {
+        next('/');
+      }
+    }
   },
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: Login,
+    beforeEnter: (to, from, next) => {
+      if (!isLoggedIn) {
+        next();
+      } else {
+        next('/');
+      }
+    }
   },
   {
     path: '*',
