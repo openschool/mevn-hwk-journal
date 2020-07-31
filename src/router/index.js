@@ -12,7 +12,7 @@ import TasksEdit from '../views/tasks/TasksEdit.vue'
 
 Vue.use(VueRouter)
 
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   const routes = [
   {
     path: '/',
