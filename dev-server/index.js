@@ -1,4 +1,5 @@
-// const express = require('express')
+// below is same as const express = require('express')
+// but we can use import because we have babel to transpile it.
 import express from 'express';
 const app = express()
 const port = 3004
